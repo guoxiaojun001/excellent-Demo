@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)http://www.open-open.com/lib/view/open1404894803482.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>6个值得推荐的Android开源框架简介 - OPEN 开发经验库</title>
+
+<meta name="robots" content="index,follow">
+<meta name="keywords" content="Android,Android开发">
+<meta name="description" content="虽然我们在做app的时候并不一定用到框架，但是一些好框架的思想是非常有学习价值的 ">
+<link rel="shortcut icon" href="http://www.open-open.com/lib/favicon.ico">
+<link rel="copyright" href="http://www.open-open.com/">
+<link type="text/css" rel="stylesheet" href="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/shCore.css">
+<link type="text/css" rel="stylesheet" href="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/shCoreRDark.css">
+<style type="text/css" media="screen, projection">@import "/lib/css/common.css";@import "/lib/css/main.css";@import "/lib/css/thickbox.css";@import "/lib/css/jquery.ui.css";</style>
+<style type="text/css">.search{margin:8px 0 0 0;overflow:hidden;}.search .TXT{float:left;}.search .BTN{float:left;font-size:10.5pt;color:#999;background:#3385FF;border:0;color:#fff;height:32px;padding:0 10px;cursor:pointer;border-bottom:1px solid #2D78F4;}.search .BTN:hover{background:#2D78F4;color:#fff;}</style>
+<script async="" type="text/javascript" src="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/ca-pub-7963911354665843.js"></script><script type="text/javascript">
+	var rooturl="/lib";
+	var wgDocKey='1404894803482';
+	var wgDocTitle='6个值得推荐的Android开源框架简介';
+	var wgDocStatusFlag='';
+	var wgUserFolders=null;
+	var wgDownFrame=null;
+	var wgCostByUser=null;
+	var wgDocFavoriteByUser=false;
+	var wgDocScoreByUser=null;
+	var wgUserLogined=0;
+	var tb_pathToImage = "/lib/images/loadingAnimation.gif";
+
+
+</script>
+<script src="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/logger.js"></script><link href="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/bdsstyle.css" rel="stylesheet" type="text/css"></head>
+<body id="view"><iframe frameborder="0" style="display: none;"></iframe><div id="bdshare" style="right: 0px; top: 256px; position: fixed; height: 330px; overflow: hidden;"><img src="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/r0.gif" alt="" style="float:left;margin-top:58px;"><iframe id="bdsIfr" style="position:absolute;display:none;z-index:9999;" frameborder="0"></iframe><div id="bdshare_l" style="display: none; left: 24px;"><div id="bdshare_l_c"><h6>分享到</h6><ul><li><a href="http://www.open-open.com/lib/view/open1404894803482.html#" class="bds_mshare mshare">一键分享</a></li><li><a href="http://www.open-open.com/lib/view/open1404894803482.html#" class="bds_qzone qqkj">QQ空间</a></li><li><a href="http://www.open-open.com/lib/view/open1404894803482.html#" class="bds_tsina xlwb">新浪微博</a></li><li><a href="http://www.open-open.com/lib/view/open1404894803482.html#" class="bds_bdysc bdysc">百度云收藏</a></li><li><a href="http://www.open-open.com/lib/view/open1404894803482.html#" class="bds_renren rrw">人人网</a></li><li><a href="http://www.open-open.com/lib/view/open1404894803482.html#" class="bds_tqq txwb">腾讯微博</a></li><li><a href="http://www.open-open.com/lib/view/open1404894803482.html#" class="bds_bdxc bdxc">百度相册</a></li><li><a href="http://www.open-open.com/lib/view/open1404894803482.html#" class="bds_kaixin001 kxw">开心网</a></li><li><a href="http://www.open-open.com/lib/view/open1404894803482.html#" class="bds_tqf txpy">腾讯朋友</a></li><li><a href="http://www.open-open.com/lib/view/open1404894803482.html#" class="bds_tieba bdtb">百度贴吧</a></li><li><a href="http://www.open-open.com/lib/view/open1404894803482.html#" class="bds_douban db">豆瓣网</a></li><li><a href="http://www.open-open.com/lib/view/open1404894803482.html#" class="bds_tsohu shwb">搜狐微博</a></li><li><a href="http://www.open-open.com/lib/view/open1404894803482.html#" class="bds_bdhome bdhome">百度新首页</a></li><li><a href="http://www.open-open.com/lib/view/open1404894803482.html#" class="bds_sqq sqq">QQ好友</a></li><li><a href="http://www.open-open.com/lib/view/open1404894803482.html#" class="bds_thx thx">和讯微博</a></li><li><a href="http://www.open-open.com/lib/view/open1404894803482.html#" class="bds_more">更多...</a></li></ul><p><a href="http://www.open-open.com/lib/view/open1404894803482.html#" class="goWebsite">百度分享</a></p></div></div></div>
+<div id="topnav">
+<div id="Personal">
+<a href="http://www.open-open.com/lib/members/login?keepThis=true&TB_iframe=true&height=177&width=280" title="登录OPEN经验库" class="" "="">登录</a>&nbsp;&nbsp;
+		<a href="http://www.open-open.com/lib/members/register?keepThis=true&TB_iframe=true&height=460&width=710" title="注册新的账号" class="">注册</a>
+	
+		
+</div>
+<div id="topmenu">
+<ul>
+		<li><a title="Java开源" href="http://www.open-open.com/">Java开源</a></li>
+		 
+		<li><a title="JS脚本大全" href="http://www.open-open.com/ajax/">JS脚本</a></li>
+		<li><a title="OPEN家园" href="http://www.open-open.com/home/">OPEN家园</a></li>
+		<li><a title="OPEN文档频道" href="http://www.open-open.com/doc/">OPEN文档</a></li>
+		<li><a title="OPEN资讯频道" href="http://www.open-open.com/news/">OPEN资讯</a></li>
+		<li><a title="OPEN论坛频道" href="http://www.open-open.com/bbs">OPEN论坛</a></li>
+		<li><a href="http://www.open-open.com/github/">Github日报</a></li>
+		<li><a href="http://www.open-open.com/code/"><strong>OPEN代码</strong></a><img src="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/new.gif" alt="最新上线"></li>
+
+
+</ul>
+</div>
+</div>
+<!--end top nav-->
+<div id="head">
+<div id="head-logo"><a title="OPEN开发经验库" href="http://www.open-open.com/lib/"><img border="0" alt="OPEN开发经验库" src="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/logo.jpg"></a></div>
+<div id="head-search">
+<form method="get" name="search" class="search" action="http://www.open-open.com/lib/search" accept-charset="GBK" onsubmit="document.charset=&#39;GBK&#39;;">
+
+<table border="0" cellspacing="0" cellpadding="0">
+		
+		<tbody>
+				<tr>
+						<td align="left">
+							<input id="searchinput" class="TXT" type="text" maxlength="1048" style="height: 25px;font-size:18px" value="" x-webkit-speech="" size="45" name="q">
+							<input id="searchbutton" class="BTN" value="经验搜索" type="submit" style="height: 28px;font-size:17">
+							<input id="od" type="hidden" name="od" value="0">
+&nbsp;&nbsp;&nbsp;&nbsp;<font style="font-size: 9.5pt"><b>推荐：</b></font><a href="http://www.miniui.com/demo/#src=datagrid/celledit.html" title="jQuery MiniUI，Web界面控件库！" target="_blank" rel="nofollow"><font color="red" style="font-size: 9.5pt"><b>jQuery MiniUI，Web界面控件库！</b></font></a><br>
+						</td>
+						</tr>
+		</tbody>
+</table>
+</form>
+
+</div>
+<div id="head-ad">
+
+</div>
+
+</div>
+<!-- end head -->
+
+<div id="content">
+<div id="content-nav">
+<a href="http://www.open-open.com/lib/list/all">所有分类</a>
+
+	&nbsp;&gt;&nbsp;
+	<a href="http://www.open-open.com/lib/list/36">开发语言与工具</a>
+
+	&nbsp;&gt;&nbsp;
+	<a href="http://www.open-open.com/lib/list/41">移动开发</a>
+
+	&nbsp;&gt;&nbsp;
+	<a href="http://www.open-open.com/lib/list/177">Android开发</a>
+
+</div>
+
+
+<div id="view-main">
+
+
+<div id="view-titleh">
+<div id="view-title">
+	<h3>6个值得推荐的Android开源框架简介</h3>
+</div>
+<div id="view-summary">
+<table>
+		<tbody>
+				<tr>
+						<td><strong>您的评价</strong>:</td>
+						<td>
+						<div id="rate" class="rate-container"><span id="star1" class="star-big-off" title="很差">&nbsp;</span><span id="star2" class="star-big-off" title="较差">&nbsp;</span><span id="star3" class="star-big-off" title="还行">&nbsp;</span><span id="star4" class="star-big-off" title="不错">&nbsp;</span><span id="star5" class="star-big-off" title="力荐">&nbsp;</span></div>
+						</td>
+						<td width="30">
+						<div id="rate-tip"></div>
+						</td>
+						
+						<td>
+						<div id="favorite-container"><span class="icon favorite">&nbsp;</span><a id="favorite" href="javascript:void(0)"><strong>收藏该经验</strong></a>&nbsp;&nbsp;&nbsp;&nbsp;
+						 </div>
+
+</td>
+				</tr>
+		</tbody>
+</table>
+
+
+</div>
+
+</div>
+
+
+<div id="readercontainer">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-7963911354665843";
+    google_ad_slot = "8119760813";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<!-- openlibview -->
+<script type="text/javascript" src="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/show_ads.js">
+</script><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+ <div id="toc"></div>
+<!-- google_ad_section_start -->
+<span>虽然我们在做app的时候并不一定用到框架，但是一些好框架的思想是非常有学习价值的</span> <p style="padding-bottom:5px;line-height:25px;background-color:#f7fcff;margin-top:0px;padding-left:0px;padding-right:0px;font-family:Tahoma, Helvetica, Arial, 宋体, sans-serif;white-space:normal;margin-bottom:0px;font-size:14px;padding-top:5px;"><strong>1、volley&nbsp;<br>
+<br>
+</strong>项目地址 https://github.com/smanikandan14/Volley-demo<br>
+&nbsp;(1)&nbsp; JSON，图像等的异步下载；<br>
+&nbsp;(2)&nbsp; 网络请求的排序（scheduling）<br>
+&nbsp;(3)&nbsp; 网络请求的优先级处理<br>
+&nbsp;(4)&nbsp; 缓存<br>
+&nbsp;(5)&nbsp; 多级别取消请求<br>
+&nbsp;(6)&nbsp; 和Activity和生命周期的联动（Activity结束时同时取消所有网络请求）</p>
+<p style="padding-bottom:5px;line-height:25px;background-color:#f7fcff;margin-top:0px;padding-left:0px;padding-right:0px;font-family:Tahoma, Helvetica, Arial, 宋体, sans-serif;white-space:normal;margin-bottom:0px;font-size:14px;padding-top:5px;"><strong>2、android-async-http&nbsp;&nbsp;<br>
+<br>
+</strong>项目地址：https://github.com/loopj/android-async-http<br>
+文档介绍：http://loopj.com/android-async-http/&nbsp;<br>
+&nbsp;(1) 在匿名回调中处理请求结果<br>
+&nbsp;(2) 在UI线程外进行http请求<br>
+&nbsp;(3) 文件断点上传<br>
+&nbsp;(4) 智能重试<br>
+&nbsp;(5) 默认gzip压缩<br>
+&nbsp;(6) 支持解析成Json格式<br>
+&nbsp;(7) 可将Cookies持久化到SharedPreferences</p>
+<p style="padding-bottom:5px;line-height:25px;background-color:#f7fcff;margin-top:0px;padding-left:0px;padding-right:0px;font-family:Tahoma, Helvetica, Arial, 宋体, sans-serif;white-space:normal;margin-bottom:0px;font-size:14px;padding-top:5px;"><strong>3、Afinal框架<br>
+<br>
+</strong>项目地址：https://github.com/yangfuhai/afinal<br>
+主要有四大模块：<br>
+&nbsp;(1) 数据库模块：android中的orm框架，使用了线程池对sqlite进行操作。<br>
+&nbsp;(2) 注解模块：android中的ioc框架，完全注解方式就可以进行UI绑定和事件绑定。无需findViewById和setClickListener等。<br>
+&nbsp;(3) 网络模块：通过httpclient进行封装http数据请求，支持ajax方式加载，支持下载、上传文件功能。<br>
+&nbsp;(4) 图片缓存模块：通过FinalBitmap，imageview加载bitmap的时候无需考虑bitmap加载过程中出现的oom和android容器快速滑动时候出现的图片错位等现象。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FinalBitmap可以配置线程加载线程数量，缓存大小，缓存路径，加载显示动画等。FinalBitmap的内存管理使用lru算法，<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 没有使用弱引用（android2.3以后google已经不建议使用弱引用，android2.3后强行回收软引用和弱引用，详情查看android官方文档），<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 更好的管理bitmap内存。FinalBitmap可以自定义下载器，用来扩展其他协议显示网络图片，比如ftp等。同时可以自定义bitmap显示器，<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 在imageview显示图片的时候播放动画等（默认是渐变动画显示）。</p>
+<p style="padding-bottom:5px;line-height:25px;background-color:#f7fcff;margin-top:0px;padding-left:0px;padding-right:0px;font-family:Tahoma, Helvetica, Arial, 宋体, sans-serif;white-space:normal;margin-bottom:0px;font-size:14px;padding-top:5px;"><strong>4、xUtils框架<br>
+<br>
+</strong>项目地址：https://github.com/wyouflf/xUtils<br>
+主要有四大模块：<br>
+&nbsp; (1) 数据库模块：android中的orm框架，一行代码就可以进行增删改查；<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 支持事务，默认关闭；<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 可通过注解自定义表名，列名，外键，唯一性约束，NOT NULL约束，CHECK约束等（需要混淆的时候请注解表名和列名）；<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 支持绑定外键，保存实体时外键关联实体自动保存或更新；<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 自动加载外键关联实体，支持延时加载；<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 支持链式表达查询，更直观的查询语义，参考下面的介绍或sample中的例子。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp; (2) 注解模块：android中的ioc框架，完全注解方式就可以进行UI，资源和事件绑定；<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 新的事件绑定方式，使用混淆工具混淆后仍可正常工作；<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 目前支持常用的20种事件绑定，参见ViewCommonEventListener类和包com.lidroid.xutils.view.annotation.event。<br>
+&nbsp; (3) 网络模块：支持同步，异步方式的请求；<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 支持大文件上传，上传大文件不会oom；<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 支持GET，POST，PUT，MOVE，COPY，DELETE，HEAD，OPTIONS，TRACE，CONNECT请求；<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 下载支持301/302重定向，支持设置是否根据Content-Disposition重命名下载的文件；<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 返回文本内容的请求(默认只启用了GET请求)支持缓存，可设置默认过期时间和针对当前请求的过期时间。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp; (4) 图片缓存模块：加载bitmap的时候无需考虑bitmap加载过程中出现的oom和android容器快速滑动时候出现的图片错位等现象；<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 支持加载网络图片和本地图片；<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 内存管理使用lru算法，更好的管理bitmap内存；<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 可配置线程加载线程数量，缓存大小，缓存路径，加载显示动画等...</p>
+<p style="padding-bottom:5px;line-height:25px;background-color:#f7fcff;margin-top:0px;padding-left:0px;padding-right:0px;font-family:Tahoma, Helvetica, Arial, 宋体, sans-serif;white-space:normal;margin-bottom:0px;font-size:14px;padding-top:5px;"><strong>5、ThinkAndroid<br>
+<br>
+</strong>项目地址：https://github.com/white-cat/ThinkAndroid<br>
+主要有以下模块：<br>
+&nbsp; (1)&nbsp; MVC模块：实现视图与模型的分离。<br>
+&nbsp; (2)&nbsp; ioc模块：android中的ioc模块，完全注解方式就可以进行UI绑定、res中的资源的读取、以及对象的初始化。&nbsp;<br>
+&nbsp; (3)&nbsp; 数据库模块：android中的orm框架，使用了线程池对sqlite进行操作。&nbsp;&nbsp;<br>
+&nbsp; (4)&nbsp; http模块：通过httpclient进行封装http数据请求，支持异步及同步方式加载。<br>
+&nbsp; (5)&nbsp; 缓存模块：通过简单的配置及设计可以很好的实现缓存，对缓存可以随意的配置<br>
+&nbsp; (6)&nbsp; 图片缓存模块：imageview加载图片的时候无需考虑图片加载过程中出现的oom和android容器快速滑动时候出现的图片错位等现象。<br>
+&nbsp; (7)&nbsp; 配置器模块：可以对简易的实现配对配置的操作，目前配置文件可以支持Preference、Properties对配置进行存取。<br>
+&nbsp; (8)&nbsp; 日志打印模块：可以较快的轻易的是实现日志打印，支持日志打印的扩展，目前支持对sdcard写入本地打印、以及控制台打印<br>
+&nbsp; (9)&nbsp; 下载器模块:可以简单的实现多线程下载、后台下载、断点续传、对下载进行控制、如开始、暂停、删除等等。<br>
+&nbsp; (10) 网络状态检测模块：当网络状态改变时，对其进行检</p>
+<p style="padding-bottom:5px;line-height:25px;background-color:#f7fcff;margin-top:0px;padding-left:0px;padding-right:0px;font-family:Tahoma, Helvetica, Arial, 宋体, sans-serif;white-space:normal;margin-bottom:0px;font-size:14px;padding-top:5px;"><strong>6、LoonAndroid&nbsp;<br>
+<br>
+</strong>项目地址：https://github.com/gdpancheng/LoonAndroid<br>
+主要有以下模块：<br>
+&nbsp; (1)&nbsp; 自动注入框架（只需要继承框架内的application既可）<br>
+&nbsp; (2)&nbsp; 图片加载框架（多重缓存，自动回收，最大限度保证内存的安全性）<br>
+&nbsp; (3)&nbsp; 网络请求模块（继承了基本上现在所有的http请求）<br>
+&nbsp; (4)&nbsp; eventbus（集成一个开源的框架）<br>
+&nbsp; (5)&nbsp; 验证框架（集成开源框架）<br>
+&nbsp; (6)&nbsp; json解析（支持解析成集合或者对象）<br>
+&nbsp; (7)&nbsp; 数据库（不知道是哪位写的 忘记了）<br>
+&nbsp; (8)&nbsp; 多线程断点下载（自动判断是否支持多线程，判断是否是重定向）<br>
+&nbsp; (9)&nbsp; 自动更新模块<br>
+&nbsp; (10) 一系列工具类</p>
+<p style="padding-bottom:5px;line-height:25px;background-color:#f7fcff;margin-top:0px;padding-left:0px;padding-right:0px;font-family:Tahoma, Helvetica, Arial, 宋体, sans-serif;white-space:normal;margin-bottom:0px;font-size:14px;padding-top:5px;">其中的 volley ，13 年有研究过，扩展性非常好，个人比较喜欢的风格。其他如 android-async-http、Afinal 也相当不错。<br>
+</p>
+<div class="BlogCopyright">来自：<a href="http://www.jb51.net/article/51052.htm" target="_blank">http://www.jb51.net/article/51052.htm</a> </div>
+<p style="padding-bottom:5px;line-height:25px;background-color:#f7fcff;margin-top:0px;padding-left:0px;padding-right:0px;font-family:Tahoma, Helvetica, Arial, 宋体, sans-serif;white-space:normal;margin-bottom:0px;font-size:14px;padding-top:5px;"></p>
+
+
+</div>
+
+<div style="margin-top: 10px;margin-bottom: 2px;">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-7963911354665843";
+    google_ad_slot = "8119760813";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<!-- openlibview -->
+<script type="text/javascript" src="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/show_ads.js">
+</script><ins id="aswift_1_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+
+</div>
+
+			<table width="100%"><tbody><tr>
+				<td valign="top" width="49%" class="Related">
+                <div style="border-bottom: 1px #ccc solid;margin-top: 5px"><strong>相关资讯</strong> 　—　<a href="http://www.open-open.com/news" target="_blank" rel="nofollow">更多</a></div>
+            	<ul>
+            		
+            	     <li><a href="http://www.open-open.com/news/view/1bc6476" target="_blank" rel="nofollow" title="[第20期]Android周报">[第20期]Android周报</a></li>            
+            	     
+            	     <li><a href="http://www.open-open.com/news/view/627127" target="_blank" rel="nofollow" title="[第13期]Android周报">[第13期]Android周报</a></li>            
+            	     
+            	     <li><a href="http://www.open-open.com/news/view/1f55540" target="_blank" rel="nofollow" title="Android开发者必知的开发资源">Android开发者必知的开发资源</a></li>            
+            	     
+            	     <li><a href="http://www.open-open.com/news/view/1e4063d" target="_blank" rel="nofollow" title="Android开发技术周报 Issue#23">Android开发技术周报 Issue#23</a></li>            
+            	     
+            	     <li><a href="http://www.open-open.com/news/view/a3d311" target="_blank" rel="nofollow" title="Android开发周报：Android Studio取代Eclipse，MVP架构解析">Android开发周报：Android Studio取代Eclipse，MVP架构解析</a></li>            
+            	     
+            	     <li><a href="http://www.open-open.com/news/view/1d7e806" target="_blank" rel="nofollow" title="[第8期]Android周报">[第8期]Android周报</a></li>            
+            	     
+            	     <li><a href="http://www.open-open.com/news/view/14caf15" target="_blank" rel="nofollow" title="Android开发周报：Android L默认加密用户数据">Android开发周报：Android L默认加密用户数据</a></li>            
+            	     
+            	     <li><a href="http://www.open-open.com/news/view/16e473e" target="_blank" rel="nofollow" title="Android开发技术周报 Issue#33">Android开发技术周报 Issue#33</a></li>            
+            	     
+            	     <li><a href="http://www.open-open.com/news/view/10c4d7a" target="_blank" rel="nofollow" title="Android开发周报：谷歌开始推送Android 5.1">Android开发周报：谷歌开始推送Android 5.1</a></li>            
+            	     
+            	     <li><a href="http://www.open-open.com/news/view/1f49060" target="_blank" rel="nofollow" title="Android开发周报：跨平台技术分析、Chrome For Android开源">Android开发周报：跨平台技术分析、Chrome For Android开源</a></li>            
+            	     
+            	     <li><a href="http://www.open-open.com/news/view/1a60495" target="_blank" rel="nofollow" title="Android 5.0将成为下一个里程碑">Android 5.0将成为下一个里程碑</a></li>            
+            	     
+            	     <li><a href="http://www.open-open.com/news/view/19d8a62" target="_blank" rel="nofollow" title="推荐给大家的7本游戏开发书">推荐给大家的7本游戏开发书</a></li>            
+            	     
+            	     <li><a href="http://www.open-open.com/news/view/c3bfe5" target="_blank" rel="nofollow" title="2015谷歌I/O大会综述：Android M、Android Studio、云端测试工具">2015谷歌I/O大会综述：Android M、Android Studio、云端测试工具</a></li>            
+            	     
+            	     <li><a href="http://www.open-open.com/news/view/c63d3" target="_blank" rel="nofollow" title="免费的Android UI库及组件推荐 ">免费的Android UI库及组件推荐 </a></li>            
+            	     
+            	     <li><a href="http://www.open-open.com/news/view/99e398" target="_blank" rel="nofollow" title="推荐！国外程序员整理的Java资源大全">推荐！国外程序员整理的Java资源大全</a></li>            
+            	     
+            	     <li><a href="http://www.open-open.com/news/view/4f22e8" target="_blank" rel="nofollow" title="搜索引擎专家告诉你一个真实的Android">搜索引擎专家告诉你一个真实的Android</a></li>            
+            	     
+            	     <li><a href="http://www.open-open.com/news/view/ff14af" target="_blank" rel="nofollow" title="最受欢迎的5个Android ORM框架">最受欢迎的5个Android ORM框架</a></li>            
+            	     
+            	     <li><a href="http://www.open-open.com/news/view/139995a" target="_blank" rel="nofollow" title="5个最好的Android应用测试框架（含例子）">5个最好的Android应用测试框架（含例子）</a></li>            
+            	     
+            	     <li><a href="http://www.open-open.com/news/view/1da682c" target="_blank" rel="nofollow" title="10个关于Android开发的实用教程推荐">10个关于Android开发的实用教程推荐</a></li>            
+            	     
+            	     <li><a href="http://www.open-open.com/news/view/1ca9196" target="_blank" rel="nofollow" title="5 个最好的 Android ORM 框架">5 个最好的 Android ORM 框架</a></li>            
+            	     
+            	     
+            	</ul>
+        		 <div style="clear: both; font-size: 1px; line-height: 0;"></div>
+            </td>
+			<td width="5px"></td>
+			<td valign="top" width="49%" class="Relatedb">
+			 	<div style="border-bottom: 1px #ccc solid;margin-top: 5px"><strong>相关文档</strong> 　—　<a href="http://www.open-open.com/doc" rel="nofollow" target="_blank">更多</a></div>
+            	<ul>
+            		
+            	     <li><a href="http://www.open-open.com/doc/view/0c28d31dd646425d88885ef8d595d48c" rel="nofollow" target="_blank" title="Android 开发从入门到精通+详细教程.pdf">Android 开发从入门到精通+详细教程.pdf</a></li>            
+            	    
+            	     <li><a href="http://www.open-open.com/doc/view/eab69ace31cb4245b98d8d04e718cd10" rel="nofollow" target="_blank" title="Android 底层开发平台.pdf.pdf">Android 底层开发平台.pdf.pdf</a></li>            
+            	    
+            	     <li><a href="http://www.open-open.com/doc/view/daeeb3ffb9184e8288901f756146b803" rel="nofollow" target="_blank" title="Android Basic.ppt">Android Basic.ppt</a></li>            
+            	    
+            	     <li><a href="http://www.open-open.com/doc/view/8b49714e847b465c9921b728af7170f2" rel="nofollow" target="_blank" title="谷歌工程师多图详解Android系统架构.pdf">谷歌工程师多图详解Android系统架构.pdf</a></li>            
+            	    
+            	     <li><a href="http://www.open-open.com/doc/view/d4927e914ac845dba014a0fada768b82" rel="nofollow" target="_blank" title="Android/OPhone开发完全讲义 - 目录.pdf">Android/OPhone开发完全讲义 - 目录.pdf</a></li>            
+            	    
+            	     <li><a href="http://www.open-open.com/doc/view/7528f4f42f444a9fb090696779929f55" rel="nofollow" target="_blank" title="《大话企业级Android 开发》.pdf">《大话企业级Android 开发》.pdf</a></li>            
+            	    
+            	     <li><a href="http://www.open-open.com/doc/view/94f571f2e37e471e9ec9b4ad72376a2e" rel="nofollow" target="_blank" title="Android应用程序开发与典型案例.pdf">Android应用程序开发与典型案例.pdf</a></li>            
+            	    
+            	     <li><a href="http://www.open-open.com/doc/view/ac34e3fecb434bf1bd239e16b3ffe115" rel="nofollow" target="_blank" title="《Android应用程序开发与典型案例》1-12章  pdf 华清远见10年特献版.pdf">《Android应用程序开发与典型案例》1-12章  pdf 华清远见10年特献版.pdf</a></li>            
+            	    
+            	     <li><a href="http://www.open-open.com/doc/view/20b1fa2214794ca4b85b6201e259502f" rel="nofollow" target="_blank" title="Android 入门.ppt">Android 入门.ppt</a></li>            
+            	    
+            	     <li><a href="http://www.open-open.com/doc/view/2821db4c6cf14be7ac17bf8689906c8c" rel="nofollow" target="_blank" title="教您初步认识安卓的简单开发用语.doc">教您初步认识安卓的简单开发用语.doc</a></li>            
+            	    
+            	     <li><a href="http://www.open-open.com/doc/view/60024e4d45634eba8a5a5ea2e55cc64f" rel="nofollow" target="_blank" title="Android 基础培训.pptx">Android 基础培训.pptx</a></li>            
+            	    
+            	     <li><a href="http://www.open-open.com/doc/view/1cfff9ac92ee45969802cad32350e1ab" rel="nofollow" target="_blank" title="《Android应用程序开发与典型案例》1-12章  pdf 华清远见....pdf">《Android应用程序开发与典型案例》1-12章  pdf 华清远见....pdf</a></li>            
+            	    
+            	     <li><a href="http://www.open-open.com/doc/view/67ca355d67964b2995099f1054c4e866" rel="nofollow" target="_blank" title="Android 应用开发简介.ppt">Android 应用开发简介.ppt</a></li>            
+            	    
+            	     <li><a href="http://www.open-open.com/doc/view/36bed829afa44fd581d322bc5c04dbf7" rel="nofollow" target="_blank" title="解析Android架构体系和机制设计_by  高煥堂_ok.doc">解析Android架构体系和机制设计_by  高煥堂_ok.doc</a></li>            
+            	    
+            	     <li><a href="http://www.open-open.com/doc/view/6fb3bdef8b7646b18f8ba471fe220658" rel="nofollow" target="_blank" title="WebKit 简介.doc">WebKit 简介.doc</a></li>            
+            	    
+            	     <li><a href="http://www.open-open.com/doc/view/9e310f014f7b46ca9c491c465adb34a1" rel="nofollow" target="_blank" title="中国电信Android框架及应用开发介绍.ppt">中国电信Android框架及应用开发介绍.ppt</a></li>            
+            	    
+            	     <li><a href="http://www.open-open.com/doc/view/ec89f62d18054a43b318f12ef8e115fa" rel="nofollow" target="_blank" title="Android学习指南.pdf">Android学习指南.pdf</a></li>            
+            	    
+            	     <li><a href="http://www.open-open.com/doc/view/487d876e122341fea81ce79b3154a70c" rel="nofollow" target="_blank" title="15个Android很有用的代码片段(技巧).doc">15个Android很有用的代码片段(技巧).doc</a></li>            
+            	    
+            	     <li><a href="http://www.open-open.com/doc/view/dcfb30531b864e1880ff8bf4354bc76c" rel="nofollow" target="_blank" title="初识Android.ppt">初识Android.ppt</a></li>            
+            	    
+            	     <li><a href="http://www.open-open.com/doc/view/44eb575adf214d6b8170ac781aef6401" rel="nofollow" target="_blank" title="Android 中文合集（126+8 篇）.pdf">Android 中文合集（126+8 篇）.pdf</a></li>            
+            	    
+            	</ul>
+            </td>
+			</tr></tbody></table>
+<div style="margin-top: 10px;margin-bottom: 10px;">
+<div id="baiduad1" style="margin-bottom: 5px;">
+</div>	
+
+</div>
+
+
+
+<div style="margin-top: 10px;margin-bottom: 10px;">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-7963911354665843";
+/* 横向单元 */
+google_ad_slot = "6546082871";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript" src="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/show_ads.js">
+</script><ins id="aswift_2_expand" style="display:inline-table;border:none;height:15px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_2_anchor" style="display:block;border:none;height:15px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="15" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+</div>	
+	
+</div>
+
+<div id="view-side">
+<div id="upload-box" class="box-blue angle">
+<div class="box-bg">
+<div class="box-body"><a id="upload" class="upload" href="http://www.open-open.com/lib/view/open1404894803482.html#"></a>
+</div>
+</div>
+</div>
+
+<div class="box-blue angle-footer">
+<div class="box_1"></div>
+<div class="box_2"></div>
+<div class="box_3"></div>
+<div class="box-bg">
+<div class="box-title">内容信息</div>
+<div id="docinfo" class="box-body">
+<div id="doc-score"><span id="score-stars" class="stars-big-8" title="经验评价得分：4.2分">&nbsp;</span><span id="score-num">4.2</span><br>
+<div id="score-ratecount">(已有5个人评价)</div>
+<div id="score-scale">
+<span class="starscale stars-small-10" title="力荐">&nbsp;</span>
+<div style="width: 60px" class="power"></div>
+60%<br>
+<span class="starscale stars-small-8" title="不错">&nbsp;</span>
+<div style="width: 0px" class="power"></div>
+0%<br>
+<span class="starscale stars-small-6" title="还行">&nbsp;</span>
+<div style="width: 40px" class="power"></div>
+40%<br>
+<span class="starscale stars-small-4" title="较差">&nbsp;</span>
+<div style="width: 0px" class="power"></div>
+0%<br>
+<span class="starscale stars-small-2" title="很差">&nbsp;</span>
+<div style="width: 0px" class="power"></div>
+0%<br>
+</div>
+</div>
+<div class="sp"></div>
+<div id="doc-status">
+<span class="item">收藏：7人</span>
+
+<span class="item">发布时间：2014-07-09 21:27:31</span>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="upload-box1" class="box-blue angle">
+<div class="box-bg">
+<div class="box-body">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-7963911354665843";
+    google_ad_slot = "7013382412";
+    google_ad_width = 336;
+    google_ad_height = 280;
+</script>
+<!-- opendoclibnew -->
+<script type="text/javascript" src="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/show_ads.js">
+</script><ins id="aswift_3_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><ins id="aswift_3_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><iframe width="336" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+</div>
+</div>
+</div>
+
+
+<div id="upload-box1" class="box-blue angle">
+<div class="box-bg">
+<div class="box-body">
+<center>
+<a href="https://www.jpush.cn/" target="_blank" rel="nofollow"><img src="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/j300250n.jpg"></a>
+</center>
+</div>
+</div>
+</div>
+
+
+<div id="view-tag" class="box-blue angle">
+<div class="box-bg">
+<div class="box-title">经验标签</div>
+<div id="tag-list" class="box-body">
+	
+		<a href="http://www.open-open.com/lib/tag/Android">Android</a>
+	 
+</div>
+
+
+
+</div>
+</div>
+
+ 
+
+<div id="view-topic" class="box-blue angle">
+<div class="box-bg">
+<div class="box-title">同类热门经验</div>
+<div class="box-body">
+	<ul id="topic-list" class="file-shortlist">
+		
+			<li>
+				<span class="samelist"></span><a title="上百个Android开源项目分享" href="http://www.open-open.com/lib/view/open1328063267889.html"><span class="title">上百个Android开源项目分享</span></a>
+				<div class="attribute"><span>67516次浏览</span></div>
+			</li>
+		
+			<li>
+				<span class="samelist"></span><a title="android" json解析及简单例子="" href="http://www.open-open.com/lib/view/open1326376799874.html"><span class="title">android json解析及简单例子</span></a>
+				<div class="attribute"><span>146782次浏览</span></div>
+			</li>
+		
+			<li>
+				<span class="samelist"></span><a title="Android" 软件自动更新功能的实现="" href="http://www.open-open.com/lib/view/open1322529319718.html"><span class="title">Android 软件自动更新功能的实现</span></a>
+				<div class="attribute"><span>52598次浏览</span></div>
+			</li>
+		
+			<li>
+				<span class="samelist"></span><a title="自定义" android="" 对话框="" (alertdialog)="" 的样式="" href="http://www.open-open.com/lib/view/open1325635738437.html"><span class="title">自定义 Android 对话框 (AlertDialog) 的样式</span></a>
+				<div class="attribute"><span>88640次浏览</span></div>
+			</li>
+		
+			<li>
+				<span class="samelist"></span><a title="adb" shell="" 命令详解="" href="http://www.open-open.com/lib/view/open1327557366686.html"><span class="title">adb shell 命令详解</span></a>
+				<div class="attribute"><span>0次浏览</span></div>
+			</li>
+		
+			<li>
+				<span class="samelist"></span><a title="android定位和地图开发实例" href="http://www.open-open.com/lib/view/open1328756009421.html"><span class="title">android定位和地图开发实例 </span></a>
+				<div class="attribute"><span>54720次浏览</span></div>
+			</li>
+		
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="view-top-category" class="box-blue angle-header">
+<div class="box-bg">
+<div class="box-title">相关经验</div>
+<div class="box-body">
+<ul id="top-list" class="file-shortlist">
+		
+			<li><span class="samelist"></span><a title="开源大数据处理系统/工具大全" href="http://www.open-open.com/lib/view/open1426206533857.html" target="_blank"><span class="title">开源大数据处理系统/工具大全</span></a><br>
+			<div class="attribute"><span class="score stars-small-0" title="经验评价得分：0.0分">&nbsp;</span> <span>0人评</span>
+			</div>
+		</li>
+		
+			<li><span class="samelist"></span><a title="值得推荐的android开发框架简介" href="http://www.open-open.com/lib/view/open1407227608270.html" target="_blank"><span class="title">值得推荐的android开发框架简介 </span></a><br>
+			<div class="attribute"><span class="score stars-small-0" title="经验评价得分：0.0分">&nbsp;</span> <span>0人评</span>
+			</div>
+		</li>
+		
+			<li><span class="samelist"></span><a title="码农周刊分类整理" href="http://www.open-open.com/lib/view/open1416282051852.html" target="_blank"><span class="title">码农周刊分类整理</span></a><br>
+			<div class="attribute"><span class="score stars-small-10" title="经验评价得分：5.0分">&nbsp;</span> <span>1人评</span>
+			</div>
+		</li>
+		
+			<li><span class="samelist"></span><a title="2015最流行的Android组件、工具、框架大全" href="http://www.open-open.com/lib/view/open1436262653692.html" target="_blank"><span class="title">2015最流行的Android组件、工具、框架大全 </span></a><br>
+			<div class="attribute"><span class="score stars-small-0" title="经验评价得分：0.0分">&nbsp;</span> <span>0人评</span>
+			</div>
+		</li>
+		
+			<li><span class="samelist"></span><a title="我是如何自学Android，资料分享（2015" 版）="" href="http://www.open-open.com/lib/view/open1423636576998.html" target="_blank"><span class="title">我是如何自学Android，资料分享（2015 版）</span></a><br>
+			<div class="attribute"><span class="score stars-small-0" title="经验评价得分：0.0分">&nbsp;</span> <span>0人评</span>
+			</div>
+		</li>
+		
+			<li><span class="samelist"></span><a title="android开源项目和框架" href="http://www.open-open.com/lib/view/open1430834533820.html" target="_blank"><span class="title">android开源项目和框架 </span></a><br>
+			<div class="attribute"><span class="score stars-small-0" title="经验评价得分：0.0分">&nbsp;</span> <span>0人评</span>
+			</div>
+		</li>
+		
+			<li><span class="samelist"></span><a title="Android开发者应该深入学习的10个开源应用项目" href="http://www.open-open.com/lib/view/open1329891168358.html" target="_blank"><span class="title">Android开发者应该深入学习的10个开源应用项目</span></a><br>
+			<div class="attribute"><span class="score stars-small-0" title="经验评价得分：0.0分">&nbsp;</span> <span>0人评</span>
+			</div>
+		</li>
+		
+			<li><span class="samelist"></span><a title="Android开发者必知的开发资源" href="http://www.open-open.com/lib/view/open1388231680172.html" target="_blank"><span class="title">Android开发者必知的开发资源 </span></a><br>
+			<div class="attribute"><span class="score stars-small-4" title="经验评价得分：2.0分">&nbsp;</span> <span>1人评</span>
+			</div>
+		</li>
+		
+			<li><span class="samelist"></span><a title="使用Android" l新特性开源项目-aiguille="" href="http://www.open-open.com/lib/view/open1432561871957.html" target="_blank"><span class="title">使用Android L新特性开源项目-Aiguille</span></a><br>
+			<div class="attribute"><span class="score stars-small-0" title="经验评价得分：0.0分">&nbsp;</span> <span>0人评</span>
+			</div>
+		</li>
+		
+			<li><span class="samelist"></span><a title="Android中不错的开源库" href="http://www.open-open.com/lib/view/open1432714064722.html" target="_blank"><span class="title">Android中不错的开源库</span></a><br>
+			<div class="attribute"><span class="score stars-small-0" title="经验评价得分：0.0分">&nbsp;</span> <span>0人评</span>
+			</div>
+		</li>
+		
+			<li><span class="samelist"></span><a title="Android" 网络开发框架的选择="" href="http://www.open-open.com/lib/view/open1394607350395.html" target="_blank"><span class="title">Android 网络开发框架的选择 </span></a><br>
+			<div class="attribute"><span class="score stars-small-0" title="经验评价得分：0.0分">&nbsp;</span> <span>0人评</span>
+			</div>
+		</li>
+		
+			<li><span class="samelist"></span><a title="GitHub" 优秀的="" android="" 开源项目="" href="http://www.open-open.com/lib/view/open1416808977430.html" target="_blank"><span class="title">GitHub 优秀的 Android 开源项目</span></a><br>
+			<div class="attribute"><span class="score stars-small-0" title="经验评价得分：0.0分">&nbsp;</span> <span>0人评</span>
+			</div>
+		</li>
+		
+			<li><span class="samelist"></span><a title="Android开源项目分类汇总" href="http://www.open-open.com/lib/view/open1406272852585.html" target="_blank"><span class="title"> Android开源项目分类汇总</span></a><br>
+			<div class="attribute"><span class="score stars-small-9" title="经验评价得分：4.7分">&nbsp;</span> <span>3人评</span>
+			</div>
+		</li>
+		
+			<li><span class="samelist"></span><a title="Android常用开源项目" href="http://www.open-open.com/lib/view/open1400830463175.html" target="_blank"><span class="title">Android常用开源项目 </span></a><br>
+			<div class="attribute"><span class="score stars-small-7" title="经验评价得分：3.5分">&nbsp;</span> <span>4人评</span>
+			</div>
+		</li>
+		
+</ul>
+</div>
+</div>
+<div class="box_3"></div>
+<div class="box_2"></div>
+<div class="box_1"></div>
+
+</div>
+
+
+
+<div id="view-top-category" class="box-blue angle-header">
+<div class="box-bg">
+<div class="box-title">相关讨论 - <a href="http://www.open-open.com/bbs" target="_blank" rel="nofollow">更多</a></div>
+<div class="box-body">
+<ul id="top-list" class="file-shortlist">
+		
+			<li>
+			<span class="samelist"></span><a title="对当前软件行业的一点点感想" href="http://www.open-open.com/bbs/view/1348305299838" rel="nofollow" target="_blank"><span class="title">对当前软件行业的一点点感想</span></a>
+		</li>
+		
+			<li>
+			<span class="samelist"></span><a title="Android中数据存储--采用SQLite存储数据及在SDCard中创建数据库" href="http://www.open-open.com/bbs/view/1321250996593" rel="nofollow" target="_blank"><span class="title">Android中数据存储--采用SQLite存储数据及在SDCard中创建数据库</span></a>
+		</li>
+		
+			<li>
+			<span class="samelist"></span><a title="Android" 开发的昨天、今天和明天="" href="http://www.open-open.com/bbs/view/1425959113326" rel="nofollow" target="_blank"><span class="title">Android 开发的昨天、今天和明天</span></a>
+		</li>
+		
+			<li>
+			<span class="samelist"></span><a title="Android" 学习资料收集汇总="" href="http://www.open-open.com/bbs/view/1324909229608" rel="nofollow" target="_blank"><span class="title">Android 学习资料收集汇总</span></a>
+		</li>
+		
+			<li>
+			<span class="samelist"></span><a title="Android核心模块内容概述" href="http://www.open-open.com/bbs/view/1318333423124" rel="nofollow" target="_blank"><span class="title">Android核心模块内容概述</span></a>
+		</li>
+		
+			<li>
+			<span class="samelist"></span><a title="Android" fragment="" 完全解析（上）="" href="http://www.open-open.com/bbs/view/1434938726997" rel="nofollow" target="_blank"><span class="title">Android Fragment 完全解析（上）</span></a>
+		</li>
+		
+			<li>
+			<span class="samelist"></span><a title="Android" 中各种="" java="" 包的功能描述="" href="http://www.open-open.com/bbs/view/1318820562093" rel="nofollow" target="_blank"><span class="title">Android  中各种 JAVA 包的功能描述</span></a>
+		</li>
+		
+</ul>
+</div>
+</div>
+<div class="box_3"></div>
+<div class="box_2"></div>
+<div class="box_1"></div>
+
+</div>
+
+<!-- end top list--></div>
+</div>
+
+
+
+
+<div id="footer">
+<div id="footer-menu"><a href="http://www.open-open.com/home/1">联系我们</a> - <a href="http://www.open-open.com/home/1">问题反馈</a> </div>
+<p>2005-2015 OPEN-OPEN, all rights reserved.</p>
+</div>
+<script type="text/javascript" src="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/jquery.min.js"></script>
+
+<script type="text/javascript" src="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/thickbox.patch.js"></script>
+
+<script type="text/javascript" src="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/app.js"></script>
+<script type="text/javascript" src="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/scrolltopcontrol.js"></script>
+<script type="text/javascript">
+	var rooturl="/lib";
+	var tb_pathToImage = "/lib/images/loadingAnimation.gif";
+	
+  	
+</script>
+<script type="text/javascript" src="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/jquery-ui.min.js"></script>
+<script type="text/javascript" src="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/scrolltopcontrol.js"></script>
+<script type="text/javascript" src="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/view.js"></script>
+<script type="text/javascript" src="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/shCore.js"></script>
+<script type="text/javascript" src="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/shAutoloader.js"></script>
+
+<script type="text/javascript">
+  	scrolltotop.offset(95,165);
+	scrolltotop.init();
+  </script>
+<script type="text/javascript">
+SyntaxHighlighter.autoloader(
+	'applescript			/lib/syntaxhighlighter_3.0.83/scripts/shBrushAppleScript.js',
+	'actionscript3 as3		/lib/syntaxhighlighter_3.0.83/scripts/shBrushAS3.js',
+	'bash shell				/lib/syntaxhighlighter_3.0.83/scripts/shBrushBash.js',
+	'coldfusion cf			/lib/syntaxhighlighter_3.0.83/scripts/shBrushColdFusion.js',
+	'cpp c					/lib/syntaxhighlighter_3.0.83/scripts/shBrushCpp.js',
+	'obj-c objc				/lib/syntaxhighlighter_3.0.83/scripts/shBrushObjC.js',
+	'c# c-sharp csharp		/lib/syntaxhighlighter_3.0.83/scripts/shBrushCSharp.js',
+	'css					/lib/syntaxhighlighter_3.0.83/scripts/shBrushCss.js',
+	'delphi pascal			/lib/syntaxhighlighter_3.0.83/scripts/shBrushDelphi.js',
+	'diff patch pas			/lib/syntaxhighlighter_3.0.83/scripts/shBrushDiff.js',
+	'erl erlang				/lib/syntaxhighlighter_3.0.83/scripts/shBrushErlang.js',
+	'groovy					/lib/syntaxhighlighter_3.0.83/scripts/shBrushGroovy.js',
+	'haxe hx				/lib/syntaxhighlighter_3.0.83/scripts/shBrushHaxe.js',
+	'java					/lib/syntaxhighlighter_3.0.83/scripts/shBrushJava.js',
+	'jfx javafx				/lib/syntaxhighlighter_3.0.83/scripts/shBrushJavaFX.js',
+	'js jscript javascript	/lib/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js',
+	'perl pl				/lib/syntaxhighlighter_3.0.83/scripts/shBrushPerl.js',
+	'php					/lib/syntaxhighlighter_3.0.83/scripts/shBrushPhp.js',
+	'text plain				/lib/syntaxhighlighter_3.0.83/scripts/shBrushPlain.js',
+	'py python				/lib/syntaxhighlighter_3.0.83/scripts/shBrushPython.js',
+	'ruby rails ror rb		/lib/syntaxhighlighter_3.0.83/scripts/shBrushRuby.js',
+	'scala					/lib/syntaxhighlighter_3.0.83/scripts/shBrushScala.js',
+	'sql					/lib/syntaxhighlighter_3.0.83/scripts/shBrushSql.js',
+	'vb vbnet				/lib/syntaxhighlighter_3.0.83/scripts/shBrushVb.js',
+	'xml xhtml xslt html	/lib/syntaxhighlighter_3.0.83/scripts/shBrushXml.js'
+);
+SyntaxHighlighter.all();
+</script>
+
+<script language="javascript" type="text/javascript">
+//生成目录索引列表
+function GenerateContentList()
+{
+    var jquery_h3_list = $('#readercontainer h3');//如果你的章节标题不是h3,只需要将这里的h3换掉即可
+    if(jquery_h3_list.length>0)
+    {
+        var content = '<a name="_labelTop"></a>';
+        content    += '<div id="navCategory" style="border-bottom:1px #dfdfdf solid;margin-bottom:5px">';
+        content    += '<p style="font-size:18px;margin:0"><b>阅读目录</b></p>';
+        content    += '<ul>';
+        for(var i =0;i<jquery_h3_list.length;i++)
+        {
+	    if(i==0){
+              var go_to_top = '<div style="text-align: right"><a name="_label' + i + '"></a></div>';
+	    }else
+	    {
+		var go_to_top = '<div style="text-align: right"><a href="#_labelTop">回到顶部</a><a name="_label' + i + '"></a></div>';
+	    }
+            $(jquery_h3_list[i]).before(go_to_top);
+            var li_content = '<li><a href="#_label' + i + '">' + $(jquery_h3_list[i]).text() + '</a></li>';
+            content += li_content;
+        }
+        content    += '</ul>';
+        content    += '</div>';
+        if($('#readercontainer').length != 0 )
+        {
+            $($('#readercontainer')[0]).prepend(content);
+        }
+    }else{
+GenerateContentList2()
+    }  
+}
+
+function GenerateContentList2()
+{
+    var jquery_h3_list = $('#readercontainer h2');//如果你的章节标题不是h2,只需要将这里的h2换掉即可
+    if(jquery_h3_list.length>0)
+    {
+        var content = '<a name="_labelTop"></a>';
+        content    += '<div id="navCategory" style="border-bottom:1px #dfdfdf solid;margin-bottom:5px">';
+        content    += '<p style="font-size:18px;margin:0"><b>阅读目录</b></p>';
+        content    += '<ul>';
+        for(var i =0;i<jquery_h3_list.length;i++)
+        {
+	    if(i==0){
+              var go_to_top = '<div style="text-align: right"><a name="_label' + i + '"></a></div>';
+	    }else
+	    {
+		var go_to_top = '<div style="text-align: right"><a href="#_labelTop">回到顶部</a><a name="_label' + i + '"></a></div>';
+	    }
+            $(jquery_h3_list[i]).before(go_to_top);
+            var li_content = '<li><a href="#_label' + i + '">' + $(jquery_h3_list[i]).text() + '</a></li>';
+            content += li_content;
+        }
+        content    += '</ul>';
+        content    += '</div>';
+        if($('#readercontainer').length != 0 )
+        {
+            $($('#readercontainer')[0]).prepend(content);
+        }
+    }    
+}
+
+GenerateContentList();
+</script>
+
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=0&amp;pos=right&amp;uid=6734290" src="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/bds_s_v2.js"></script>
+
+<script type="text/javascript">
+var bds_config={"bdTop":256};
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+</script>
+<!-- Baidu Button END -->
+
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all  ui-draggable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-favorite-box" style="display: none; z-index: 1000; outline: 0px;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-favorite-box">收藏提示</span><a href="http://www.open-open.com/lib/view/open1404894803482.html#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div id="favorite-box" class="ui-dialog-content ui-widget-content" style="display: block;">
+<table>
+		<tbody>
+				<tr>
+						<td width="70" align="right">文件夹</td>
+						<td><select id="fav_folderlist" name="folder">
+								<option selected="" value="0">请选择...</option>
+								<option id="newfolder-sp" disabled="" value="">-------------</option>
+								<option value="-1">新增文件夹...</option>
+						</select></td>
+				</tr>
+				<tr style="display: none" id="newfolder-input">
+						<td align="right">新增文件夹</td>
+						<td><input id="fav_newfolder" maxlength="50" type="text" name="newfolder"></td>
+				</tr>
+				<tr>
+						<td align="right">标签</td>
+						<td><input id="fav_tags" maxlength="135" size="20" type="text" name="tags"></td>
+				</tr>
+				<tr>
+						<td></td>
+						<td colspan="2">(多个标签用逗号分隔)</td>
+				</tr>
+		</tbody>
+</table>
+</div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">取消</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">确认</span></button></div></div></div><div id="topcontrol" title="回到顶部" style="position: fixed; bottom: 165px; right: 95px; cursor: pointer; display: none;"><img src="./6个值得推荐的Android开源框架简介 - OPEN 开发经验库_files/gotop.gif" style="width:35px; height:35px;"></div></body></html>
